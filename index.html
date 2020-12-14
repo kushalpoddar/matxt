@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<title>Hand Written Digit Recognition using TensorFlow.js</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="js/chart.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >    
+	<link rel="stylesheet" type="text/css" href="style/digit.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+</head>
+<body>
+	<main>
+		<div style="margin-top:15%!important" class="container mt-1">
+			<div class="digit-demo-container">
+				<h3 class="text-center" style="font-size: 30px">maTxt - By Rohan Kumar & Kushal Poddar</h3>
+				<div class="flex-two">
+					<div id="canvas_box_wrapper" class="canvas-box-wrapper">
+						<div id="canvas_box" class="canvas-box"></div>
+						<div class="row">
+						<div class="col-6">
+							<button id="clear-button" class="btn btn-dark">Clear</button>
+						</div>
+						<div class="col-6">
+							<button id="predict-button" class="btn btn-dark">Predict</button>
+						</div></div>
+					</div>
+					<div class="col-6">
+						<div id="result_box" class="col-12 col-md-7">
+							<canvas id="chart_box" width="100" height="100"></canvas>
+						</div>
+						<div class="col-12 d-block mt-2 mt-md-0 text-md-left prediction-text">
+							<p ><b>String: </b><span id="string"></span></p>
+							<p ><b>Evaluated Value: </b><span id="eval"></span></p>
+							<p ><b>Latex Code: </b><span id="latex"></span></p>
+							<p ><b>Latex Display: </b><span id="latex_disp"></span></p>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>   
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js" integrity="sha512-DZqqY3PiOvTP9HkjIWgjO6ouCbq+dxqWoJZ/Q+zPYNHmlnI2dQnbJ5bxAHpAMw+LXRm4D72EIRXzvcHQtE8/VQ==" crossorigin="anonymous"></script>
+	<script src="js/digit-recognition.js"></script>
+
+
+</body>
+</html>
